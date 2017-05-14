@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIi-AL-h8h">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YSImageScroll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-Tw-hJb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dR-JD-9It">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="46"/>
+                                        <color key="backgroundColor" red="1" green="0.58321946859359741" blue="0.58538341522216797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQU-Ir-TMK">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="46"/>
+                                        <color key="backgroundColor" red="0.59162050485610962" green="0.99899810552597046" blue="0.58824431896209717" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVh-Y4-jk8">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="46"/>
+                                        <color key="backgroundColor" red="1" green="0.58321946859999996" blue="0.58538341520000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7dR-JD-9It" firstAttribute="width" secondItem="uQU-Ir-TMK" secondAttribute="width" id="Ken-ZN-dSt"/>
+                                    <constraint firstAttribute="height" constant="46" id="xHo-nt-1PX"/>
+                                    <constraint firstItem="uQU-Ir-TMK" firstAttribute="width" secondItem="CVh-Y4-jk8" secondAttribute="width" id="zGp-d5-R5D"/>
+                                </constraints>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbZ-eg-PAx">
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rGG-Tw-hJb" secondAttribute="trailing" id="3GY-Le-a0V"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fbZ-eg-PAx" secondAttribute="bottom" id="5yc-UJ-lwC"/>
+                            <constraint firstItem="rGG-Tw-hJb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="igS-Ml-Vq6"/>
+                            <constraint firstItem="fbZ-eg-PAx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n4E-Qj-R1c"/>
+                            <constraint firstAttribute="trailing" secondItem="fbZ-eg-PAx" secondAttribute="trailing" id="tbK-3A-0ut"/>
+                            <constraint firstItem="rGG-Tw-hJb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wcU-Zo-wJV"/>
+                            <constraint firstItem="fbZ-eg-PAx" firstAttribute="top" secondItem="rGG-Tw-hJb" secondAttribute="bottom" constant="8" id="zU6-dK-2Ko"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FzY-6d-vWN"/>
+                    <connections>
+                        <outlet property="scrollView" destination="fbZ-eg-PAx" id="F8p-N0-U4O"/>
+                        <outlet property="verticalStackView" destination="rGG-Tw-hJb" id="8nP-3b-Hks"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1055.2" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ywg-tc-g6M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oIi-AL-h8h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WXg-fj-hej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bYM-Sb-2js"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eh-N9-TN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="124"/>
         </scene>
     </scenes>
 </document>
